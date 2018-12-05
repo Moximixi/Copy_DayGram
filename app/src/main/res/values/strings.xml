@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DayGram_copy</string>
+    <string name="add_entry">+</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="day" />
+</resources>

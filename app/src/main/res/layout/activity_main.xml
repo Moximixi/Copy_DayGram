@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ListView
+        android:id="@+id/entryListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="50dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:visibility="visible"/>
+    <ListView
+        android:id="@+id/DiaryListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="50dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:visibility="invisible"/>
+        <!--layout_alignParentTop表示该控件里面的元素相对父元素上对齐-->
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <!--选择月的控件-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyccler_view_month"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+        <!--选择年的控件-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyccler_view_year"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+        <!--底部菜单控件-->
+        <LinearLayout
+            android:id="@+id/bottom_menum"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="false"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/buttonEntry"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="#000"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="10dp"
+                >
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/labelMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textIsSelectable="false"
+                android:textColor="#000"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_weight="3.2" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#000"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/labelYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.6"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textIsSelectable="false"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#000"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/buttonTodayEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_entry"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:textSize="28sp"
+                android:textIsSelectable="false"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:contextClickable="true"
+                android:textAlignment="center"
+                android:layout_weight="3.5" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#000"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/buttonMonthly"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_weight="3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:clickable="true"
+                >
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:background="#504F4B"/>
+                <View android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_centerInParent="true"
+                    android:background="#504F4B"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#504F4B" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/buttonRandom"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/stripes_bg"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:layout_weight="3.6">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
